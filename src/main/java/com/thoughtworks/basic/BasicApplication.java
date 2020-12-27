@@ -1,13 +1,11 @@
-package com.thoughtworks.rslist;
+package com.thoughtworks.basic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RsListApplication {
-
+public class BasicApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RsListApplication.class, args);
+        SpringApplication.run(BasicApplication.class, args);
     }
-
 }

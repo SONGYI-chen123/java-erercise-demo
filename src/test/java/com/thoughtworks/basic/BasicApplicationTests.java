@@ -1,10 +1,10 @@
-package com.thoughtworks.rslist;
+package com.thoughtworks.basic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RsListApplicationTests {
+class BasicApplicationTests {
 
     @Test
     void contextLoads() {
