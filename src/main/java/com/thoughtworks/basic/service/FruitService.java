@@ -5,7 +5,9 @@ import com.thoughtworks.basic.enumeration.FruitType;
 import com.thoughtworks.basic.repository.FruitRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,7 +20,8 @@ public class FruitService {
 
     public List<Fruit> sortFruit() {
         List<Fruit> fruits = fruitRepository.findAll();
-        return filterFruit(fruits, new FruitRedAndHeavyPredicate());
+
+        return Optional.ofNullable(filterFruit(fruits, new FruitRedAndHeavyPredicate())).orElse(new ArrayList<>());
     }
 
     public static List<Fruit> filterFruit(List<Fruit> fruits, FruitPredicate p) {
