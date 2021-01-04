@@ -1,4 +1,4 @@
-package parameterization.predicate;
+package parameterization;
 
 import parameterization.Apple;
 
