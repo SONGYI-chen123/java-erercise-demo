@@ -21,6 +21,9 @@ public class FilterApples {
                 return "RED".equals(apple.getColor());
             }
         });
+
+        //Lambda
+        List<Apple> greenApples = filterApples(apples,apple -> "GREEN".equals(apple.getColor()));
     }
 
     public static List<Apple> filterApples(List<Apple> apples, ApplePredicate p){
