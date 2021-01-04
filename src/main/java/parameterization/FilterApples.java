@@ -13,6 +13,14 @@ public class FilterApples {
                 new Apple("RED",120));
         //predicate
         List<Apple> heavyApples = filterApples(apples,new AppleHeavyWeightPredicate());
+
+        //Anonymous class
+        List<Apple> redApples = filterApples(apples, new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return "RED".equals(apple.getColor());
+            }
+        });
     }
 
     public static List<Apple> filterApples(List<Apple> apples, ApplePredicate p){
