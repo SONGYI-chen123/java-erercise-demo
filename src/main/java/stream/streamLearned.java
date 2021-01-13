@@ -52,7 +52,14 @@ public class streamLearned {
     }
 
     public List<Apple> skip(List<Apple> apples) {
-        //去掉流中前几个元素
+        //skip去掉流中前几个元素
         return apples.stream().skip(3).collect(Collectors.toList());
+    }
+
+    public List<String> distinct(List<String> list) {
+        //distinct去掉重复的元素
+        return list.stream()
+                .distinct()
+                .collect(Collectors.toList());
     }
 }
