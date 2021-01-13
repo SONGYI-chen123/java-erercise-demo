@@ -50,4 +50,9 @@ public class streamLearned {
         //limit返回流中前几个元素
         return apples.stream().limit(3).collect(Collectors.toList());
     }
+
+    public List<Apple> skip(List<Apple> apples) {
+        //去掉流中前几个元素
+        return apples.stream().skip(3).collect(Collectors.toList());
+    }
 }
