@@ -45,4 +45,9 @@ public class streamLearned {
                 .filter(apple -> "GREEN".equals(apple.getColor()))
                 .collect(Collectors.toList());
     }
+
+    public List<Apple> limit(List<Apple> apples) {
+        //limit返回流中前几个元素
+        return apples.stream().limit(3).collect(Collectors.toList());
+    }
 }
