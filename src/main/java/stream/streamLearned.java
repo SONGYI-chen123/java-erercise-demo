@@ -67,4 +67,9 @@ public class streamLearned {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 19);
         return numbers.stream().allMatch(integer -> integer < 10);//检查是否所有元素都符合小于10的条件
     }
+
+    public boolean anyMatch() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 19);
+        return numbers.stream().anyMatch(integer -> integer < 10);//检查是否至少有一个元素符合条件
+    }
 }
