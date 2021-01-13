@@ -62,4 +62,9 @@ public class streamLearned {
                 .distinct()
                 .collect(Collectors.toList());
     }
+
+    public boolean allMatch() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 19);
+        return numbers.stream().allMatch(integer -> integer < 10);//检查是否所有元素都符合小于10的条件
+    }
 }
