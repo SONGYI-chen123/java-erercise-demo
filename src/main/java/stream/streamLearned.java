@@ -38,4 +38,11 @@ public class streamLearned {
                 .sorted(Comparator.comparing(Apple::getWeight))
                 .collect(Collectors.toList());
     }
+
+    public List<Apple> filterGreenApple(List<Apple> apples) {
+        //filter在流中排除某些元素
+        return apples.stream()
+                .filter(apple -> "GREEN".equals(apple.getColor()))
+                .collect(Collectors.toList());
+    }
 }
