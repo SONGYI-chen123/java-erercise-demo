@@ -77,4 +77,9 @@ public class streamLearned {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 19);
         return numbers.stream().noneMatch(integer -> integer < 10);//检查是否没有一个元素符合条件
     }
+
+    public Integer sum(List<Integer> list) {
+        return list.stream()
+                .reduce(0, (x, y) -> x + y);//按照后面的规则进行反复结合，reduce得到list中所有元素的和
+    }
 }
